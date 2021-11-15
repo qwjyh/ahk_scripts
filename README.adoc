@@ -1,0 +1,14 @@
+= README
+
+== What is this.
+AutoHotKeyのスクリプト
+
+=== files
+anki-ru.ahk:: Ankiでロシア語のカードを作るときの便利ショートカット
+言語切り替え+かな入力切替機能とアクセント(`U+0301`)入力機能
+
+
+== LICENSE
+MIT License
+
+Copyright (c) 2021 qwjyh
