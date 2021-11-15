@@ -17,5 +17,13 @@ If (lang = 1)
   Send, {LAlt down}
   Send, {LShift}
   Send, {LAlt up}
+  Send, {Tab}
+  Sleep, 100
+  Send, {vkF0}
   lang := lang - 1
 }
+return
+
+^v::
+Send, {U+0301}
+return
