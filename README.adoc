@@ -7,6 +7,8 @@ AutoHotKeyのスクリプト
 anki-ru.ahk:: Ankiでロシア語のカードを作るときの便利ショートカット
 言語切り替え+かな入力切替機能とアクセント(`U+0301`)入力機能
 
+minecraft_storagebox.ahk:: minecraftの1.7.10でストレージボックスを使った時の回収のLの代わりにマウスの戻るボタンを使う
+
 
 == LICENSE
 MIT License

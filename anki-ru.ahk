@@ -18,8 +18,8 @@ If (lang = 1)
   Send, {LShift}
   Send, {LAlt up}
   Send, {Tab}
-  Sleep, 100
-  Send, {vkF0}
+  Sleep, 800
+  ; Send, {vkF0}
   lang := lang - 1
 }
 return
