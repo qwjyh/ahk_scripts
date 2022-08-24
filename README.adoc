@@ -9,6 +9,8 @@ anki-ru.ahk:: Ankiでロシア語のカードを作るときの便利ショー�
 
 minecraft_storagebox.ahk:: minecraftの1.7.10でストレージボックスを使った時の回収のLの代わりにマウスの戻るボタンを使う
 
+home_util.ahk:: 変換/無変換キーとhjkl, asdfで矢印、およびHome,PgUp,PgDn,End
+IMEで切り替えを割り当ててるので本来の機能も残してる
 
 == LICENSE
 MIT License
