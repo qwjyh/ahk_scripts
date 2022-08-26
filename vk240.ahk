@@ -11,33 +11,19 @@ SendMode, Input
 KeyHistory
 ListVars
 
-; Gui, New
-; Gui, Show, W400 H300 NoActivate
-height := 0
-
 
 last_released_vkf0 := A_TickCount
 last_pressed_vkf0 := A_TickCount
 vkf0_state := "Off"   ; "Off" | "Short" | "Long" | "Pending"
 seq_count := 0
 prv_seq_count := 0
-vkf0_press_start := A_TickCount
-
-short_interval := 50
-long_interval := 200
-release_interval := 400
 
 called := 0
 reset_last_release := 0
 
 vk83_state := GetKeyState("vk83", "P")
 
-; #Persistent
-; SetTimer, Update_vkf0_state, 1000
-; return
-
 SetTimer, Update_vkf0_state, 100
-
 
 
 vk83::
@@ -52,9 +38,9 @@ vk83 Up::
   return
 
 Update_vkf0_state:
-  called += 1 ; for debug
+  ; called += 1 ; for debug
 
-  vk83_state := GetKeyState("vk83", "P") ; for debug
+  ; vk83_state := GetKeyState("vk83", "P") ; for debug
   if (vkf0_state == "Off") {
   }
   ; long
