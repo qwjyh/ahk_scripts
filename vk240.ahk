@@ -44,12 +44,14 @@ Update_vkf0_state:
   if (vkf0_state == "Off") {
   }
   ; long
-  if ((seq_count >= 2) && (GetKeyState("vk83", "P") == 1)) {
+  pressed_key := Check_other_keys()
+  if (((pressed_key != 0) && (GetKeyState("vk83", "P") == 1)) || ((seq_count >= 2) && (GetKeyState("vk83", "P") == 1))) {
     Send, {LCtrl Down}
+    ; Send, pressed_key
     vkf0_state := "Long"
   }
   ; reset
-  if ((prv_seq_count == 1) && (GetKeyState("vk83", "P") == 0)) {
+  if ((vkf0_state == "Off") && (prv_seq_count == 1) && (GetKeyState("vk83", "P") == 0)) {
     Send, {U+005C} ; \
     vkf0_state := "Off"
     prv_seq_count := seq_count
@@ -61,3 +63,14 @@ Update_vkf0_state:
   }
   ; ListVars
   return
+
+; return pressed key (single key)
+Check_other_keys(){
+  count_keys := 0
+  Loop 26 {
+    if (GetKeyState(Chr(A_Index + 96)) == 1) {
+      return Chr(A_Index + 96)
+    }
+  }
+  return 0
+}
