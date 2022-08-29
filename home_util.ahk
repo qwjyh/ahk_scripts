@@ -2,7 +2,7 @@
 SendMode Input
 SetWorkingDir, %A_ScriptDir%1
 
-KeyHistory
+; KeyHistory
 
 #UseHook
 
