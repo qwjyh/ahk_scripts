@@ -12,6 +12,11 @@ minecraft_storagebox.ahk:: minecraftの1.7.10でストレージボックスを�
 home_util.ahk:: 変換/無変換キーとhjkl, asdfで矢印、およびHome,PgUp,PgDn,End
 IMEで切り替えを割り当ててるので本来の機能も残してる
 
+=== how to use
+==== home_util
+`install_home_util.ps1`はレジストリの編集、コンパイル、タスクスケジューラへの登録を一括で行う。
+AutoHotKeyをインストールし、`Ahk2Exe.exe`の場所を書き換えて使う。
+
 == LICENSE
 MIT License
 
