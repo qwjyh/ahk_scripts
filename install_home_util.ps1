@@ -11,8 +11,6 @@ if ($null -eq $ahk2exe_path) {
   exit
 }
 
-# write to HKLM
-powershell.exe -File .\change_sc_registrykey.ps1
 
 # compile
 & $ahk2exe_path /in .\home_util.ahk /out home_util.exe
