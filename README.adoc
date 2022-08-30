@@ -14,7 +14,7 @@ IMEで切り替えを割り当ててるので本来の機能も残してる
 
 === how to use
 ==== home_util
-`install_home_util.ps1`はレジストリの編集、コンパイル、タスクスケジューラへの登録を一括で行う。
+`install_home_util.ps1`はコンパイル、タスクスケジューラへの登録を一括で行う。
 AutoHotKeyをインストールし、`Ahk2Exe.exe`の場所を書き換えて使う。
 
 == LICENSE
