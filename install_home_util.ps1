@@ -19,6 +19,7 @@ if ($null -eq $ahk2exe_path) {
 $action = New-ScheduledTaskAction -Execute (Resolve-Path .\home_util.exe)
 $trigger = New-ScheduledTaskTrigger -AtStartup
 $settings = New-ScheduledTaskSettingsSet
-Register-ScheduledTask -TaskPath \ -TaskName home_util -Action $action -Trigger $trigger -Settings $settings -Force
+$user = $env:COMPUTERNAME + "\Administrator"
+Register-ScheduledTask -TaskPath \ -TaskName home_util -Action $action -Trigger $trigger -Settings $settings -User $user -Force
 
 Start-ScheduledTask -TaskName home_util
