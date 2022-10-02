@@ -23,3 +23,7 @@ $user = $env:COMPUTERNAME + "\Administrator"
 Register-ScheduledTask -TaskPath \ -TaskName home_util -Action $action -Trigger $trigger -Settings $settings -User $user -Force
 
 Start-ScheduledTask -TaskName home_util
+
+# add to startup folder
+$startup = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\"
+Copy-Item .\home_util.exe $startup
